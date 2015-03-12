@@ -130,9 +130,9 @@ class VehicleApiClient extends ApiClient
      * @param  string           $makeName  The name of the make.
      * @param  string           $modelName The name of the model.
      * @param  int              $year      The model year.
-     * @param  string             $state     Filters models by state.
-     * @param  string             $submodel  Filters models by submodel types.
-     * @param  string             $category  Filters models by category.
+     * @param  string           $state     Filters models by state.
+     * @param  string           $submodel  Filters models by submodel types.
+     * @param  string           $category  Filters models by category.
      * @return VehicleModelYear
      *
      * @see http://developer.edmunds.com/api-documentation/vehicle/spec_model_year/v2/02_year_details/api-description.html

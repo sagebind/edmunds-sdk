@@ -3,6 +3,17 @@ namespace Edmunds\SDK;
 
 /**
  * Represents a particular photo of a specific vehicle style.
+ *
+ * @property string $title                The media item title
+ * @property string $category             The media item category
+ * @property array  $tags                 The list of tags
+ * @property string $provider             The media item provider
+ * @property array  $sources              List of photo sources
+ * @property string $shotTypeAbbreviation Shot type abbreviation for photo
+ * @property string $color                The vehicle color
+ * @property array  $submodels            The list of submodels
+ *
+ * @see http://developer.edmunds.com/api-documentation/media/photos/v2/
  */
 class VehiclePhoto extends RemoteObject
 {

@@ -4,6 +4,15 @@ namespace Edmunds\SDK;
 /**
  * A vehicle model year for a vehicle model is the calendar year designation
  * assigned by the manufacturer to the annual version of that model.
+ *
+ * @property int    $id     The Edmunds ID for the model year
+ * @property object $make   Car make details (id, name and niceName)
+ * @property object $model  Car model details (id, name and niceName)
+ * @property array  $states The state of this model/year (e.g. NEW, USED, or FUTURE)
+ * @property array  $styles The styles for the model year
+ * @property int    $year   The model year
+ *
+ * @see http://developer.edmunds.com/api-documentation/vehicle/spec_model_year/v2/
  */
 class VehicleModelYear extends RemoteObject
 {
