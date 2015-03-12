@@ -8,10 +8,10 @@ namespace Edmunds\SDK;
  *
  * @property int    $id       The style ID
  * @property string $name     The style name
- * @property array  $make     The car make details (id, name and nicename)
- * @property array  $model    The car model details (id, name and nicename)
- * @property array  $year     The car model year ID and four-digit year
- * @property array  $submodel Car submode details
+ * @property object $make     The car make details (id, name and nicename)
+ * @property object $model    The car model details (id, name and nicename)
+ * @property object $year     The car model year ID and four-digit year
+ * @property object $submodel Car submode details
  * @property string $trim     The car trim
  *
  * @see http://developer.edmunds.com/api-documentation/vehicle/spec_style/v2/
