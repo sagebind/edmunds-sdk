@@ -1,0 +1,12 @@
+{
+    "name": "coderstephen/edmunds-sdk",
+    "description": "An implementation of an Edmunds SDK for PHP",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Stephen Coakley",
+            "email": "me@stephencoakley.com"
+        }
+    ],
+    "require": {}
+}
