@@ -197,16 +197,16 @@ class VehicleApiClient extends ApiClient
      * @param  int            $styleId The ID of the vehicle style.
      * @return VehiclePhoto[]
      *
-     * @see http://developer.edmunds.com/api-documentation/vehicle/media_photos/v1/
+     * @see http://developer.edmunds.com/api-documentation/media/photos/v2/
      */
     public function getStylePhotos($styleId)
     {
-        $response = $this->makeCall('/v1/api/vehiclephoto/service/findphotosbystyleid', [
+        $response = $this->makeCall(sprintf('/api/media/v2/styles/%d/photos', $styleId), [
             'styleId' => $styleId
         ]);
 
         return array_map(function ($object) {
             return new VehiclePhoto($this, $object);
-        }, $response);
+        }, $response->photos);
     }
 }

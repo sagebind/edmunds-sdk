@@ -6,12 +6,17 @@ namespace Edmunds\SDK;
  */
 class VehiclePhoto extends RemoteObject
 {
+    /**
+     * Gets the URL for the photo of a given size.
+     *
+     * @param  int    $size The width dimension of the photo.
+     * @return string
+     */
     public function getUrl($size)
     {
-        foreach ($this->photoSrcs as $url) {
-            $photoSize = intval(substr($url, strrpos($url, '_') + 1, -4));
-            if ($this->getSizeFromUrl($url) === $size) {
-                return 'https://media.ed.edmunds-media.com' . $url;
+        foreach ($this->sources as $source) {
+            if ($source->size->width === $size) {
+                return 'https://media.ed.edmunds-media.com' . $source->link->href;
             }
         }
 
@@ -28,18 +33,13 @@ class VehiclePhoto extends RemoteObject
         $bestUrl = null;
         $bestSize = 0;
 
-        foreach ($this->photoSrcs as $url) {
-            if ($this->getSizeFromUrl($url) > $bestSize) {
-                $bestUrl = $url;
-                $bestSize = $this->getSizeFromUrl($url);
+        foreach ($this->sources as $source) {
+            if ($source->size->width > $bestSize) {
+                $bestUrl = $source->link->href;
+                $bestSize = $source->size->width;
             }
         }
 
         return 'https://media.ed.edmunds-media.com' . $bestUrl;
-    }
-
-    protected function getSizeFromUrl($url)
-    {
-        return intval(substr($url, strrpos($url, '_') + 1, -4));
     }
 }
