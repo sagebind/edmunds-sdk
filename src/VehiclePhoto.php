@@ -1,5 +1,5 @@
 <?php
-namespace CarRived\Edmunds;
+namespace Edmunds\SDK;
 
 /**
  * Represents a particular photo of a specific vehicle style.

@@ -1,5 +1,5 @@
 <?php
-namespace CarRived\Edmunds;
+namespace Edmunds\SDK;
 
 abstract class ApiClient
 {

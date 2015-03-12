@@ -1,5 +1,5 @@
 <?php
-namespace CarRived\Edmunds;
+namespace Edmunds\SDK;
 
 /**
  * A vehicle model is specific vehicle brand identified by a name or number

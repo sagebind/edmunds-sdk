@@ -1,5 +1,5 @@
 <?php
-namespace CarRived\Edmunds;
+namespace Edmunds\SDK;
 
 /**
  * A local object that represents remote data.

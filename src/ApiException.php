@@ -1,5 +1,5 @@
 <?php
-namespace CarRived\Edmunds;
+namespace Edmunds\SDK;
 
 /**
  * Exception thrown when an error occurs during an API call.

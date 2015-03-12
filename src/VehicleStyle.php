@@ -1,5 +1,5 @@
 <?php
-namespace CarRived\Edmunds;
+namespace Edmunds\SDK;
 
 /**
  * Represents a particular style of a specific make/model/year vehicle and

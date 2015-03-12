@@ -1,5 +1,5 @@
 <?php
-namespace CarRived\Edmunds;
+namespace Edmunds\SDK;
 
 /**
  * A vehicle make is either the name of its manufacturer or, if the manufacturer
