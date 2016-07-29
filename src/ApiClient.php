@@ -18,7 +18,7 @@ abstract class ApiClient
         return $this->requestCount;
     }
 
-    public function makeCall($endpoint, array $params)
+    public function makeCall($endpoint, array $params = [])
     {
         // remove empty params
         $params = array_filter($params, function ($var) {
