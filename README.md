@@ -14,15 +14,15 @@ $ composer require coderstephen/edmunds-sdk
 ```
 
 ## Usage
-First, create an `ApiClient` instance, which connects to the Edmunds server:
+First, create an `ApiClient` instance of the type that corresponds to the desired Edmunds API, which connects to the Edmunds server:
 
 ```php
-$client = new Edmunds\SDK\ApiClient('YOUR_API_KEY_HERE');
+$client = new Edmunds\SDK\VehicleApiClient('YOUR_API_KEY_HERE');
 ```
 
-Pass in your Edmunds API key as the first argument. If you do not already have an API key, you will need to [register with Edmunds](http://edmunds.mashery.com/member/register/) first.
+All available APIs extend from the `ApiClient` base class and are created in the same way. Pass in your Edmunds API key as the first argument. If you do not already have an API key, you will need to [register with Edmunds](http://edmunds.mashery.com/member/register/) first.
 
-You can now access almost all of the Edmunds API with the client object. Currently, only the [Vehicle API]() has object wrappers. To make a raw request to any endpoint, use the `ApiClient::makeCall()` method:
+You can now access almost all of the Edmunds API with the client object. Currently, only the [Vehicle API](http://developer.edmunds.com/api-documentation/vehicle/) has object wrappers. To make a raw request to any endpoint, use the `ApiClient::makeCall()` method:
 
 ```php
 $response = $client->makeCall('/api/inventory/v2/inventories', [
